@@ -201,6 +201,7 @@ public class FragmentSearchListView extends Fragment {
             int quantity = Server.getInstance().getQuantityOfItemInUserList(item);
             if(quantity == -1) {
                 setViewVisibility(mRightTouchView, View.INVISIBLE);
+                mQuantityView.setText("");
             } else {
                 setViewVisibility(mRightTouchView, View.VISIBLE);
                 mQuantityView.setText(String.valueOf(quantity));
